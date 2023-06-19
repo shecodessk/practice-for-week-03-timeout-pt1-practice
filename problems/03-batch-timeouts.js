@@ -29,11 +29,17 @@ const timeoutObjs = batchTimeouts(tasks, delays);
 //  'hi' after 500 ms
 //  'WHAT?' after 900 ms
 
-console.log(timeoutObjs); // [ Timeout {...},  Timeout {...}, Timeout {...} ]
+console.logtiM(timeoutObjs); // [ Timeout {...},  Timeout {...}, Timeout {...} ]
 ***********************************************************************/
 
 function batchTimeouts(callbacks, delays) {
-  // Your code here
+const array = [];
+  for(let i = 0; i < callbacks.length || i < delays.length; i++){
+    let cb = callbacks[i];
+    let delay = delays[i];
+    array.push(setTimeout(cb, delay));
+  }
+return array;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

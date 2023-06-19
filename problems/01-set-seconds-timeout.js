@@ -24,8 +24,12 @@ setSecondsTimeout(function () {
 ***********************************************************************/
 
 function setSecondsTimeout(cb, delayInSeconds) {
-  // Your code here
+  const seconds = delayInSeconds * 1000;
+    
+    return setTimeout(cb, seconds);
+
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
